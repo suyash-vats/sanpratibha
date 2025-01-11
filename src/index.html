@@ -163,6 +163,26 @@
         /* padding: 15px 30px; */
     }
 }
+
+
+@media (max-width: 480px) {
+  .left {
+    position: sticky;
+    top: 10px; /* Stick the logo at this position from the top */
+    left: 10px; /* Keep it aligned to the left */
+    width: 80px; /* Adjust size for smaller screens */
+    display: none;
+  }
+
+  .right {
+    position: sticky;
+    top: 10px; /* Stick the logo at this position from the top */
+    left: auto;
+    right: 10px; /* Keep it aligned to the right */
+    width: 80px; /* Adjust size for smaller screens */
+    display: none;
+  }
+}
 </style>
 
     <!-- SEO -->
@@ -317,46 +337,90 @@
     </script>
   </head>
   <a
-  id="mlh-trust-badge"
+
+  id="mlh-trust-badge-right"
+
+
   style="
+
     display: block;
+
     max-width: 200px;
+
     min-width: 100px;
+
     position: fixed;
+
     right: 50px;
+
     top: -15px;
+
     width: 10%;
+
     z-index: 10000;
+
   "
+
   href="#"
+
   target="_blank"
+
 >
+
   <img
+
     src="./assets/images/it.png"
+
     alt="Major League Hacking 2023 Hackathon Season"
+
     style="width: 100%"
+    class="right"
+
   />
+
 </a>
+
 <a
-  id="mlh-trust-badge"
+
+  id="mlh-trust-badge-left"
+
   style="
+
     display: block;
+
     max-width: 100px;
+
     min-width: 60px;
+
     position: fixed;
+
     left: 50px;
+
     top: 0;
+
     width: 10%;
+
     z-index: 10000;
+
   "
+
   href="#"
+
   target="_blank"
+
 >
+
   <img
+
     src="./assets/images/san1.png"
+
     alt="Major League Hacking 2023 Hackathon Season"
+
     style="width: 100%"
+    class="left"
+
   />
+
 </a>
 
   <body class="hide-navbar">
