@@ -1,0 +1,17 @@
+{
+  "files.autoSave": "onFocusChange",
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.tabSize": 2,
+  "git.autofetch": true,
+  "css.validate": false,
+  "scss.validate": false,
+  "stylelint.enable": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.fixAll.stylelint": true
+  },
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "files.exclude": {}
+}

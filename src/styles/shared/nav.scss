@@ -1,0 +1,49 @@
+@use 'src/styles/variables' as *;
+
+$nav-height: 3rem;
+
+body {
+  padding-top: $nav-height;
+}
+
+.nav {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  left: 0;
+  overflow: hidden;
+  height: $nav-height;
+  backdrop-filter: blur(10px);
+  background-color: rgb(255 255 255 / 60%);
+  box-shadow: 0 0 1rem rgb(0 0 0 / 30%);
+
+  &__list {
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  &__link {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    padding: 0 0.5rem;
+    color: $c-txt-dark;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+  }
+}
+
+// TODO: show navbar when it's ready (remember to remove the class in the html)
+.hide-navbar {
+  padding-top: 0;
+
+  .nav {
+    display: none;
+  }
+}

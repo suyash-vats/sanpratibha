@@ -1,0 +1,44 @@
+$c-palette-blue: #494136;
+$c-palette-black: #241e16;
+$c-palette-black-light: #494136;
+
+$c-bg-darker: #241e16;
+$c-bg-dark: #494136;
+$c-bg-light: #eae2d6;
+$c-bg-lighter: #fff;
+
+$c-primary: #1cae86;
+$c-primary-accessible: #158566;
+$c-txt-dark: #000;
+$c-txt-light: #fff;
+
+$c-hero-shadow: hsl(287deg 100% 50% / 66%);
+
+$c-faq-bg: $c-palette-black-light;
+$c-faq-block: $c-bg-light;
+$c-faq-question: #dabc98;
+$c-faq-hover: linear-gradient(135deg, #e6c287, #deb588);
+
+$c-during-border: $c-bg-dark;
+$c-during-bg: $c-bg-lighter;
+$c-during-bg-card: $c-bg-light;
+
+$c-live-bg: $c-palette-black-light;
+
+// $c-sponsors-bg: #f1f5ff;
+$c-sponsors-shadow: hsl(23deg 100% 50% / 10%);
+
+$c-about-us-bg: $c-palette-black-light;
+$c-about-us-bg-card: $c-bg-light;
+
+$c-gdpr-bg: #fff;
+$c-gdpr-txt: $c-txt-dark;
+
+$ease-bounce: cubic-bezier(0.18, 0.89, 0.32, 1.28);
+$ease-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+$ease-quad-in: cubic-bezier(0.55, 0.09, 0.68, 0.53);
+$ease-cubic: cubic-bezier(0.22, 0.61, 0.36, 1);
+
+$border-radius-big: 1rem;
+$border-radius-medium: 0.75rem;
+$border-radius-small: 0.5rem;

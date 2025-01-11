@@ -1,0 +1,221 @@
+@use 'sass:math';
+@use 'sass:map';
+@use 'src/styles/variables' as *;
+
+.section--sponsors,
+.section--partners {
+  background: url('/src/assets/images/trencadis/light.svg') #f2ede6 center /
+    640px repeat;
+  color: $c-bg-dark;
+}
+
+.section--sponsors {
+  border-bottom: 0;
+  background-position: center bottom;
+}
+
+.section--partners {
+  background-position: center top;
+}
+
+.section--partners > .content__wrapper {
+  padding-top: 0;
+}
+
+.logo {
+  $package-props: (
+    'tera': (
+      'height': 8rem,
+      'width': math.div(100%, 3),
+    ),
+    'giga': (
+      'height': 8rem * 0.85,
+      'width': 100% * 0.25,
+    ),
+    'mega': (
+      'height': 8rem * 0.85 * 0.85,
+      'width': 100% * 0.2,
+    ),
+    'kilo': (
+      'height': 8rem * 0.85 * 0.85 * 0.85,
+      'width': math.div(100%, 6),
+    ),
+    'mili': (
+      'height': 8rem * 0.85 * 0.85 * 0.85 * 0.85,
+      'width': math.div(100%, 7),
+    ),
+  );
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-left: 0;
+  }
+
+  &__item {
+    position: relative;
+    display: block;
+    border: solid 4px #eae2d6;
+    border-radius: 1em;
+    background-color: #fff;
+
+    // box-shadow: 0 1rem 1rem -0.5rem $c-sponsors-shadow;
+    color: $c-bg-dark;
+    transition: transform 50ms $ease-quad, box-shadow 50ms $ease-quad;
+    user-select: none;
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: '';
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    &::before {
+      z-index: 1;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      border-radius: 1em;
+      backdrop-filter: blur(0.5rem);
+      background-color: rgb(255 255 255 / 25%);
+      pointer-events: none;
+      transition: opacity 400ms cubic-bezier(0.23, 0.96, 0.17, 1);
+      // will-change: opacity;
+    }
+
+    &::after {
+      z-index: 2;
+      top: 50%;
+      right: 0;
+      left: 0;
+      content: 'Go to website';
+      font-size: 1.5em;
+      font-weight: bold;
+      letter-spacing: 0.03em;
+      transform: translate(0, -50%) translateY(1em);
+      transition: opacity 300ms $ease-quad, transform 200ms $ease-quad;
+      // will-change: transform, opacity;
+    }
+
+    &:hover {
+      &::before {
+        opacity: 1;
+      }
+
+      &::after {
+        opacity: 1;
+        transform: translate(0, -50%) translateY(0);
+      }
+      @supports not (backdrop-filter: blur(0.5rem)) {
+        .logo__image {
+          filter: blur(0.5rem);
+        }
+      }
+    }
+
+    &:active {
+      box-shadow: 0 1rem 1rem -0.5rem transparent;
+      transform: scale(0.975) translateY(0.25rem);
+    }
+  }
+
+  &__link {
+    display: block;
+    height: 100%;
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 1.5em 0.4em;
+    object-fit: contain;
+    transition: filter 400ms cubic-bezier(0.23, 0.96, 0.17, 1);
+  }
+
+  &__item--unrevealed {
+    cursor: help;
+
+    &::after {
+      color: $c-bg-dark;
+      content: 'Top secret';
+      text-transform: uppercase;
+    }
+
+    &__link {
+      pointer-events: none;
+    }
+
+    &__image {
+      opacity: 0.5;
+    }
+  }
+
+  // [1000px, ∞]
+  @media screen and (min-width: 1000px) {
+    $logo-gap: 1rem;
+
+    &__item {
+      margin: ($logo-gap * 0.5);
+    }
+
+    &__list {
+      margin: 0 -1 * ($logo-gap * 0.5);
+    }
+
+    @each $package, $props in $package-props {
+      &__list--#{$package} &__item {
+        height: map.get($props, 'height');
+        flex-basis: calc(#{map.get($props, 'width')} - #{$logo-gap});
+        font-size: map.get($props, 'height') * 0.125;
+      }
+    }
+  }
+
+  // [750px, 1000px]
+  @media screen and (max-width: 1000px) and (min-width: 750px) {
+    $logo-gap: 1.6vw;
+
+    &__item {
+      margin: ($logo-gap * 0.5);
+    }
+
+    &__list {
+      margin: 0 -1 * ($logo-gap * 0.5);
+    }
+
+    @each $package, $props in $package-props {
+      &__list--#{$package} &__item {
+        height: math.div(map.get($props, 'height'), 1rem) * 1.6vw;
+        flex-basis: calc(#{map.get($props, 'width')} - #{$logo-gap});
+        font-size: math.div(map.get($props, 'height') * 0.125, 1rem) * 1.6vw;
+      }
+    }
+  }
+
+  // [0px, 750px]
+  @media screen and (max-width: 750px) {
+    $logo-gap: 1.6vw;
+
+    &__item {
+      margin: ($logo-gap * 0.5);
+    }
+
+    &__list {
+      margin: 0 -1 * ($logo-gap * 0.5);
+    }
+
+    @each $package, $props in $package-props {
+      &__list--#{$package} &__item {
+        height: map.get($props, 'height');
+        flex-basis: calc(#{map.get($props, 'width')} - #{$logo-gap});
+        font-size: map.get($props, 'height') * 0.125;
+      }
+    }
+  }
+}

@@ -1,0 +1,255 @@
+@use 'src/styles/variables' as *;
+
+$hero-max-height: 900px;
+
+.section--hero {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  overflow: hidden;
+  max-width: unset;
+  height: $hero-max-height;
+  max-height: calc(100vh - 8rem);
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: center;
+  border-bottom: 0;
+  background: transparent;
+  place-items: center;
+
+  .bg {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+
+    &__layer-bottom {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: url('/src/assets/images/trencadis/white.svg') #eae2d6 center /
+        640px repeat;
+      clip-path: polygon(
+        0 0,
+        0 calc(100% - 10px),
+        calc(((100% - 2350px) / 2) + 150px) calc(100% - 10px),
+        calc(((100% - 2350px) / 2) + 250px) calc(100% + 42px - 100px),
+        calc(((100% - 2350px) / 2) + 350px) calc(100% + 10px - 100px),
+        calc(((100% - 2350px) / 2) + 450px) calc(100% + 42px - 100px),
+        calc(((100% - 2350px) / 2) + 550px) calc(100% - 10px),
+        calc(((100% - 2350px) / 2) + 700px) calc(100% - 10px),
+        calc(((100% - 2350px) / 2) + 800px) calc(100% + 42px - 100px),
+        calc(((100% - 2350px) / 2) + 900px) calc(100% + 10px - 100px),
+        calc(((100% - 2350px) / 2) + 1000px) calc(100% + 42px - 100px),
+        calc(((100% - 2350px) / 2) + 1100px) calc(100% - 10px),
+        calc(((100% - 2350px) / 2) + 1250px) calc(100% - 10px),
+        calc(((100% - 2350px) / 2) + 1350px) calc(100% + 42px - 100px),
+        calc(((100% - 2350px) / 2) + 1450px) calc(100% + 10px - 100px),
+        calc(((100% - 2350px) / 2) + 1550px) calc(100% + 42px - 100px),
+        calc(((100% - 2350px) / 2) + 1650px) calc(100% - 10px),
+        calc(((100% - 2350px) / 2) + 1800px) calc(100% - 10px),
+        calc(((100% - 2350px) / 2) + 1900px) calc(100% + 42px - 100px),
+        calc(((100% - 2350px) / 2) + 2000px) calc(100% + 10px - 100px),
+        calc(((100% - 2350px) / 2) + 2100px) calc(100% + 42px - 100px),
+        calc(((100% - 2350px) / 2) + 2200px) calc(100% - 10px),
+        100% calc(100% - 10px),
+        100% 0
+      );
+      inset: 0;
+    }
+
+    &__edge {
+      position: absolute;
+      top: calc(50% - $hero-max-height / 2);
+      height: $hero-max-height;
+
+      &--right {
+        right: calc(-90px + 15vw);
+      }
+
+      &--left {
+        left: calc(-90px + 15vw);
+      }
+
+      &-bg {
+        position: absolute;
+        top: calc(50% - $hero-max-height / 2);
+        width: calc(-90px + 15vw + 200px);
+        height: $hero-max-height;
+        background: url('/src/assets/images/trencadis/white.svg') #eae2d6 center /
+          640px repeat;
+        clip-path: polygon(
+          100% 0%,
+          20px 0%,
+          85px 10%,
+          135px 20%,
+          175px 35%,
+          190px 50%,
+          175px 65%,
+          135px 80%,
+          85px 90%,
+          20px 100%,
+          100% 100%
+        );
+
+        &--left {
+          right: 0;
+          background-image: url('/src/assets/images/trencadis/lime.svg');
+        }
+
+        &--right {
+          left: 0;
+          background-image: url('/src/assets/images/trencadis/cyan.svg');
+          transform: scaleX(-1);
+        }
+      }
+    }
+
+    &__bottom {
+      $width: 2350px;
+      $heigth: 100px;
+
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: calc((100% - $width) / 2);
+      width: $width;
+    }
+  }
+
+  .biene {
+    $width: 300px;
+    display: block;
+    width: $width; /* Default width */
+    margin-top: -30vh;
+    user-select: none;
+}
+
+/* Responsive styles for tablets and below */
+@media (max-width: 1024px) {
+    .biene {
+        width: 45%; /* Set width to 80% on tablets */
+        margin-top: -25vh; /* Adjust the margin for better positioning */
+    }
+}
+
+/* Responsive styles for mobile screens */
+@media (max-width: 600px) {
+    .biene {
+        width: 45%; /* Make it take 90% of the screen on mobile */
+        margin-top: -20vh; /* Adjust margin for mobile */
+    }
+}
+
+/* Extra small screens (portrait phones) */
+@media (max-width: 400px) {
+    .biene {
+        width: 45%; /* Full width on very small screens */
+        margin-top: -15vh; /* Further adjustment of margin */
+    }
+}
+
+
+  .title {
+    position: relative;
+    display: inline-block;
+    color: $c-txt-dark;
+    font-size: clamp(4rem, 15vw, 6rem); // Fluid typography
+    line-height: 0.71;
+    text-transform: uppercase;
+  
+    &__title {
+      position: relative;
+      margin: 0 0 0.2em -0.10em;
+      font-size: clamp(2rem, 8vh, 4rem); // Adjusted clamp for smaller screens
+      font-weight: 400;
+  
+      @media (max-width: 480px) {
+        font-size: clamp(1.5rem, 4vh, 3rem); // Ensure it's readable on small screens
+        margin: 0 0 0.1em 0; // Reduce negative margin for better alignment
+      }
+  
+      &-img {
+        position: absolute;
+        width: 5.11em;
+        inset: 0 0.1em;
+        pointer-events: none;
+        user-select: none;
+  
+        @media (max-width: 768px) {
+          width: 4em; // Smaller images on medium screens
+        }
+  
+        @media (max-width: 480px) {
+          width: 3em; // Smaller images on small screens
+        }
+      }
+    }
+  
+    &__bg {
+      position: absolute;
+      z-index: -1;
+      display: flex;
+      overflow: visible;
+      align-items: center;
+      justify-content: center;
+      inset: -1em;
+  
+      > svg {
+        width: clamp(4em, 8vw, 6em); // Adjust size dynamically
+        transform: scale(1, 0.8) translate(0, 0.1em);
+      }
+    }
+  
+    &__more-info {
+      display: flex;
+      font-size: clamp(0.2em, 0.3vw, 0.25em); // Adjust font size dynamically
+      font-weight: 600;
+  
+      > * {
+        flex: 1 1 0;
+        white-space: nowrap;
+      }
+  
+      @media (max-width: 768px) {
+        font-size: 0.2em; // Smaller font size for medium screens
+      }
+  
+      @media (max-width: 480px) {
+        font-size: 0.15em; // Smaller font size for small screens
+      }
+    }
+  
+    &__hackers,
+    &__date,
+    &__duration {
+      padding: 0 10px;
+      text-align: left;
+  
+      @media (max-width: 768px) {
+        padding: 0 8px; // Adjust padding for medium screens
+      }
+  
+      @media (max-width: 480px) {
+        padding: 0 5px; // Adjust padding for small screens
+      }
+    }
+  
+    &__date {
+      text-align: center;
+    }
+  
+    &__duration {
+      text-align: right;
+    }
+  }
+  
+
+  .apply-button {
+    margin-top: calc(min(15vh, (900px - 15rem) * 0.15) - 1rem);
+  }
+
+  .mt-2 {
+    margin-top: 20px;
+  }
+}

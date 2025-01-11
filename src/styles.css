@@ -1,0 +1,92 @@
+/* General Form Styling */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Form Animation on Hover */
+.contact-form:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 25px;
+}
+
+label {
+    font-size: 1rem;
+    color: #444;
+    font-weight: 500;
+    margin-bottom: 8px;
+    display: block;
+}
+
+input, textarea {
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 100%;
+    margin-top: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+/* Focus Effect on Inputs */
+input:focus, textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Textarea Specific Styles */
+textarea {
+    resize: vertical;
+    height: 150px;
+    min-height: 120px;
+}
+
+/* Button Styling */
+.classic-button--contact-us {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.classic-button--contact-us:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Honeypot Spam Protection */
+.hidden {
+    display: none;
+}
+
+/* Responsive Styles for Mobile */
+@media (max-width: 768px) {
+    .contact-form {
+        padding: 30px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .classic-button--contact-us {
+        padding: 10px 25px;
+    }
+}
