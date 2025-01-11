@@ -1,5 +1,5 @@
 @use 'sass:math';
-@use 'src/styles/variables' as *;
+@use '../variables.scss' as *;
 
 .section--what-is-a-hackathon {
   overflow: visible;
