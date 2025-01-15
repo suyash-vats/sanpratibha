@@ -165,7 +165,7 @@ $hero-max-height: 900px;
       font-weight: 400;
   
       @media (max-width: 480px) {
-        font-size: clamp(1.5rem, 4vh, 3rem); // Ensure it's readable on small screens
+        font-size: clamp(1.5rem, 3vh, 3rem); // Ensure it's readable on small screens
         margin: 0 0 0.1em 0; // Reduce negative margin for better alignment
       }
   
