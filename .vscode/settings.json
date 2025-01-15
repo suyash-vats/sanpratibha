@@ -13,5 +13,8 @@
     "source.fixAll.stylelint": "explicit"
   },
   "typescript.enablePromptUseWorkspaceTsdk": true,
-  "files.exclude": {}
+  "files.exclude": {},
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  }
 }
