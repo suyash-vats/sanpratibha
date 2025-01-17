@@ -197,6 +197,187 @@
         display: none;
       }
     }
+/* Styling for the Event Organizer title */
+.event-organizer-title {
+    text-align: center; /* Centers the heading */
+    font-size: 2rem; /* Larger font size for emphasis */
+    color: #2c3e50; /* Darker shade for better contrast */
+    margin-bottom: 30px; /* Adds more space below the heading */
+    font-weight: bold; /* Makes the heading bold */
+    text-transform: uppercase; /* Makes the title in uppercase */
+}
+
+/* Styling for the team list */
+.team-list {
+    display: flex;
+    justify-content: center; /* Centers the items horizontally */
+    align-items: center; /* Aligns items vertically in the middle */
+    list-style: none; /* Removes default bullets */
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9; /* Light background */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    gap: 20px; /* Adds spacing between items */
+}
+
+/* Styling for each list item */
+.team-list li {
+    text-align: center; /* Centers text inside each list item */
+    padding: 15px 20px; /* Adds space inside each list item */
+    background-color: #fff; /* White background for list items */
+    border-radius: 8px; /* Rounded corners for each list item */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Soft shadow around items */
+    width: 200px; /* Fixed width for each list item */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Styling for the name */
+.team-list li strong {
+    display: block; /* Ensures the name and position are stacked */
+    font-size: 1.3rem; /* Larger font size for names */
+    font-weight: bold; /* Makes the name bold */
+    color: #2c3e50; /* Dark color for names */
+    margin-bottom: 5px; /* Adds space between the name and position */
+}
+
+/* Styling for the position */
+.team-list li span {
+    display: block; /* Ensures the position is stacked */
+    font-size: 1rem; /* Slightly smaller font size for the position */
+    color: #7f8c8d; /* Grey color for the position */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .team-list {
+        flex-direction: column; /* Stacks items vertically on small screens */
+        padding: 15px;
+    }
+
+    .team-list li {
+        padding: 20px;
+        width: 100%; /* Makes each item take full width */
+        margin-bottom: 15px; /* Adds space between items */
+    }
+
+    .team-list li:last-child {
+        margin-bottom: 0; /* Removes the last margin */
+    }
+}
+
+/* General list styling for consistency */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Center the list items horizontally */
+    padding: 0;
+}
+
+/* Horizontal list styling */
+.horizontal-list {
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    justify-content: center; /* Center list items horizontally */
+}
+
+.horizontal-list li {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    text-align: center; /* Center text inside list items */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center content inside list items */
+    align-items: center; /* Horizontally center content inside list items */
+}
+
+.horizontal-list li:hover {
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Main coordinator section styling */
+.coordinator-section {
+    display: flex;
+    flex-direction: column; /* Stack vertically */
+    gap: 40px; /* Space between Student and Event groups */
+    justify-content: center;
+    align-items: center; /* Center everything horizontally */
+    padding: 20px;
+    box-sizing: border-box; /* Ensure padding doesn't break layout */
+}
+
+/* Styling for each coordinator group */
+.coordinator-group {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px; /* Ensure max width for sections */
+    background-color: white; /* White background */
+    margin: 0 auto; /* Center the sections */
+    display: flex;
+    flex-direction: column; /* Ensure items are stacked vertically */
+    align-items: center; /* Horizontally center all content inside the group */
+}
+
+/* Header styling */
+.coordinator-group h3 {
+    text-align: center; /* Ensure the header is centered */
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: transparent; /* Remove background color */
+    padding: 10px;
+    border-radius: 5px;
+    color: black; /* Set header text color to black */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .coordinator-section {
+        gap: 20px;
+    }
+
+    .coordinator-group {
+        width: 90%; /* Adjust width for smaller screens */
+    }
+
+    .event-organizer-title {
+        font-size: 1.8rem; /* Adjust font size on smaller screens */
+        margin-bottom: 20px; /* Reduced margin on smaller screens */
+    }
+
+    .horizontal-list li {
+        width: 100%; /* Adjust width for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .event-organizer-title {
+        font-size: 1.6rem; /* Adjust font size further for very small screens */
+    }
+
+    .team-list li {
+        width: 100%; /* Full width for list items on very small screens */
+        padding: 15px;
+    }
+
+    .horizontal-list li {
+        width: 100%; /* Full width for horizontal items on very small screens */
+    }
+}
+
   </style>
 
   <!-- SEO -->
@@ -225,7 +406,7 @@
         "startDate": "2023-05-12",
         "endDate": "2023-05-14",
         "eventStatus": "EventScheduled",
-        "url": "https://hackupc.com/",
+        "url": "#",
         "eventAttendanceMode": "OfflineEventAttendanceMode ",
         "location": {
           "@type": "Place",
@@ -583,7 +764,8 @@
                 5. 5G technology<br>
                 <br>
                 <br>
-                <strong>Registration Fee ₹150</strong>
+                <strong>Registration Fee:-₹150</strong><br>
+                <strong>Last Date of Registration 30 January</strong>
               </p>
 
               <div class="participate__bottom-row">
@@ -612,10 +794,11 @@
                 Participants solve a given problem by writing and executing code.<br>
 
                 <strong>Round 3:Blind screen Code</strong><br>
-                Participants debug or analyze pre-written code displayed on the screen.
+                "Blind screen coding" refers to writing code without visually seeing the screen
                 <br>
                 <br>
-                <strong>Registration Fee ₹100</strong>
+                <strong>Registration Fee:-₹100</strong><br>
+                <strong>Last Date of Registration 30 January</strong>
               </p>
               <div class="participate__bottom-row">
                 <a class="classic-button" href="https://forms.gle/g1uhbNup7UEbzUpM9" role="button" data-ga-apply-button
@@ -889,6 +1072,65 @@
       </div>
     </section>
 
+    <section class="section section--sponsors" id="sponsors">
+      <div class="content__wrapper">
+        <h2 class="section__title">Event Management</h2>
+        <div class="content__wrapper">
+          <div class="contact-us__layout">
+            <div class="card card--contact-us">
+              <h2 class="event-organizer-title">Event Organizer</h2>
+<ul class="team-list">
+    <li>
+        <strong>Dr. R.P BUWA</strong>
+        <span>I/c Principal</span>
+    </li>
+    <li>
+        <strong>Ms. J.J Kadadi</strong>
+        <span>Director, Dept. of Management and Computer Science</span>
+    </li>
+    <li>
+        <strong>Mrs. R.V Hundekari</strong>
+        <span>Convener, Dept. of Computer Science</span>
+    </li>
+</ul>
+
+              
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="content__wrapper" styl>
+        <!-- <div class="content__wrapper"> -->
+          <!-- <div class="contact-us__layout"> -->
+            <div class="card card--contact-us" style="margin-top: -20vh;">
+              <h2 class="event-organizer-title">Co-Ordinator</h2>
+              <div class="coordinator-section">
+                <div class="coordinator-group event-coordinator">
+                  <h3>Event Co-ordinator</h3>
+                  <ul class="horizontal-list">
+                    <li>PROF. BUKKA B.S<br>9503337227</li>
+                    <li>PROF. PATIL S.T<br>9325661944</li>
+                  </ul>
+                </div>
+                <div class="coordinator-group student-coordinator">
+                  <h3>Student Co-ordinator</h3>
+                  <ul class="horizontal-list">
+                    <li>SAKSHI CHABUKSWAR<br>9307679116</li>
+                    <li>SAKIB CHAPATLE<br>9623565957</li>
+                  </ul>
+                </div>
+                
+              </div>
+              
+              
+              
+            </div>
+          <!-- </div> -->
+        <!-- </div> -->
+      </div>
+    </section>
+
     <section class="section section--contact-us" id="contact-us">
       <div class="content__wrapper">
         <h2 class="section__title">Contact Us</h2>
@@ -965,7 +1207,7 @@
     <q class="signature footer__element footer__element--last"><strong>Made </strong>by BCA II students
       <strong><a class="signature__author footer__link" href="https://suyash-space.netlify.app/" target="_blank"
           rel="noopener noreferrer" hreflang="en">Suyash vats</a></strong>|
-      <strong><a class="signature__author footer__link" href="#" target="_blank" rel="noopener noreferrer"
+      <strong><a class="signature__author footer__link" href="https://sham-portfolio-ebon.vercel.app/" target="_blank" rel="noopener noreferrer"
           hreflang="en">Sham Avachar</a></strong>
     </q>
   </footer>
