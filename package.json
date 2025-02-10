@@ -22,7 +22,7 @@
     "@types/prettier": "3.0.0",
     "@types/stylelint": "14.0.0",
     "@types/webfontloader": "1.6.38",
-    "@types/webpack": "5.28.0",
+    "@types/webpack": "5.28.5",
     "@typescript-eslint/eslint-plugin": "5.48.2",
     "@typescript-eslint/parser": "5.48.2",
     "babel-loader": "9.1.2",
