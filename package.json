@@ -25,7 +25,7 @@
     "@types/webpack": "5.28.5",
     "@typescript-eslint/eslint-plugin": "5.48.2",
     "@typescript-eslint/parser": "5.48.2",
-    "babel-loader": "9.1.2",
+    "babel-loader": "9.2.1",
     "clean-webpack-plugin": "4.0.0",
     "compression-webpack-plugin": "10.0.0",
     "css-loader": "7.1.2",
