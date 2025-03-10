@@ -14,7 +14,7 @@
     "lint:prettier": "prettier . --write"
   },
   "devDependencies": {
-    "@babel/core": "7.26.0",
+    "@babel/core": "7.26.9",
     "@babel/preset-env": "7.26.9",
     "@types/eslint": "9.6.1",
     "@types/gtag.js": "0.0.20",
