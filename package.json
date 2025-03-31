@@ -70,7 +70,7 @@
   "dependencies": {
     "@babel/polyfill": "7.12.1",
     "@fontsource/montserrat": "5.2.5",
-    "core-js": "3.40.0",
+    "core-js": "3.41.0",
     "focus-visible": "5.2.1",
     "lax.js": "2.0.3",
     "normalize.css": "8.0.1"
