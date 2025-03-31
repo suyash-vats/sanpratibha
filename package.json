@@ -58,7 +58,7 @@
     "stylelint-config-standard": "37.0.0",
     "stylelint-order": "6.0.4",
     "stylelint-scss": "6.11.1",
-    "terser-webpack-plugin": "5.3.6",
+    "terser-webpack-plugin": "5.3.14",
     "ts-loader": "9.5.2",
     "typescript": "5.8.2",
     "webpack": "5.97.1",
