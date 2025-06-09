@@ -39,7 +39,7 @@
     "husky": "9.1.7",
     "lint-staged": "16.1.0",
     "mini-css-extract-plugin": "2.9.2",
-    "postcss": "8.5.3",
+    "postcss": "8.5.4",
     "postcss-easing-gradients": "3.0.1",
     "postcss-focus-visible": "10.0.1",
     "postcss-loader": "8.1.1",
