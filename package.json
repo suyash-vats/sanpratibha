@@ -33,7 +33,7 @@
     "eslint": "9.28.0",
     "eslint-config-prettier": "10.1.5",
     "eslint-plugin-prettier": "5.4.1",
-    "glob": "11.0.2",
+    "glob": "11.0.3",
     "html-loader": "5.1.0",
     "html-webpack-plugin": "5.6.3",
     "husky": "9.1.7",
