@@ -51,7 +51,7 @@
     "sass": "1.90.0",
     "sass-loader": "16.0.5",
     "style-loader": "4.0.0",
-    "stylelint": "16.21.1",
+    "stylelint": "16.23.1",
     "stylelint-config-idiomatic-order": "10.0.0",
     "stylelint-config-prettier": "9.0.5",
     "stylelint-config-sass-guidelines": "12.1.0",
