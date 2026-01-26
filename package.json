@@ -45,7 +45,7 @@
     "postcss-loader": "8.2.0",
     "postcss-preset-env": "11.1.1",
     "postcss-reporter": "7.1.0",
-    "prettier": "3.8.0",
+    "prettier": "3.8.1",
     "prettier-config-standard": "7.0.0",
     "purgecss-webpack-plugin": "7.0.2",
     "sass": "1.97.2",
